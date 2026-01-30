@@ -1,0 +1,11 @@
+{
+  "owner": "therohitdas",
+  "slug": "slack-personal",
+  "displayName": "Slack Skill for macOS, so your agents can read and send messages 💬",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1769750324081,
+    "commit": null
+  },
+  "history": []
+}
