@@ -1,0 +1,11 @@
+{
+  "owner": "digitaladaption",
+  "slug": "cron-creator",
+  "displayName": "Cron Creator",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1769780070924,
+    "commit": null
+  },
+  "history": []
+}
