@@ -3,9 +3,15 @@
   "slug": "product-strategist",
   "displayName": "Product Strategist",
   "latest": {
-    "version": "0.1.0",
-    "publishedAt": 1769736881226,
-    "commit": "https://github.com/clawdbot/skills/commit/c85b97fd5a1c22962deb372fb6f233a03978f25c"
+    "version": "0.1.1",
+    "publishedAt": 1769779333543,
+    "commit": null
   },
-  "history": []
+  "history": [
+    {
+      "version": "0.1.0",
+      "publishedAt": 1769736881226,
+      "commit": "https://github.com/clawdbot/skills/commit/c85b97fd5a1c22962deb372fb6f233a03978f25c"
+    }
+  ]
 }
