@@ -1,0 +1,11 @@
+{
+  "owner": "orosha-ai",
+  "slug": "agent-trust-validator",
+  "displayName": "Agent Trust Validator",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1769873322889,
+    "commit": null
+  },
+  "history": []
+}
