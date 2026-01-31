@@ -1,0 +1,11 @@
+{
+  "owner": "fancygobot",
+  "slug": "flowmind",
+  "displayName": "FlowMind",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1769852295339,
+    "commit": null
+  },
+  "history": []
+}
