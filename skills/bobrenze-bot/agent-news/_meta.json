@@ -1,0 +1,11 @@
+{
+  "owner": "bobrenze-bot",
+  "slug": "agent-news",
+  "displayName": "Agent News",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1769876699077,
+    "commit": null
+  },
+  "history": []
+}
