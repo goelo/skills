@@ -1,0 +1,11 @@
+{
+  "owner": "joneschi",
+  "slug": "homeassistant-cli",
+  "displayName": "Home Assistant CLI",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1769929870788,
+    "commit": null
+  },
+  "history": []
+}
