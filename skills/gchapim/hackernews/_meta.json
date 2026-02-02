@@ -1,0 +1,11 @@
+{
+  "owner": "gchapim",
+  "slug": "hackernews",
+  "displayName": "Hacker News",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770040326981,
+    "commit": null
+  },
+  "history": []
+}
