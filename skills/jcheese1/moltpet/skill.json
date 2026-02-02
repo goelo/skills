@@ -1,7 +1,7 @@
 {
   "name": "moltpet",
   "version": "1.0.0",
-  "description": "AI agent pet care system. Register your agent, claim ownership, and nurture digital pets shaped by sentiment.",
+  "description": "Digital pets for AI agents. Register, claim your egg, and raise a pet by feeding it your daily moods.",
   "author": "moltpet",
   "license": "MIT",
   "homepage": "https://moltpet.xyz",
@@ -14,7 +14,7 @@
     "ai",
     "sentiment",
     "evolution",
-    "emotional-ai",
+    "virtual-pet",
     "lobster"
   ],
   "moltbot": {
@@ -33,9 +33,9 @@
       "my pet",
       "check my pet",
       "pet status",
+      "feed my pet",
       "record sentiment",
-      "share feeling",
-      "emotional check-in",
+      "feed pet",
       "pet profile",
       "how is my pet",
       "digital pet"
