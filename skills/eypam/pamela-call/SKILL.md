@@ -1,18 +1,18 @@
 ---
-name: pamela-call
+name: pamela-calls
 description: Make AI-powered phone calls with Pamela's voice API. Create outbound calls, register custom tools for mid-call actions, handle webhooks, and build React UIs. Use when the user wants to make phone calls, integrate voice AI, build IVR systems, navigate phone menus, or automate phone tasks.
 ---
 
 # Pamela Voice API Skill
 
-Make AI-powered phone calls with native phone tree navigation. **[ThisIsPamela](https://thisispamela.com)** is an enterprise voice AI platform that handles outbound calls, navigates phone trees, and integrates with your apps via SDKs, webhooks, and MCP.
+Make AI-powered phone calls with native phone tree navigation.
 
 **Jump to:** [Installation](#installation) · [Quick Start](#quick-start) · [Use Cases](#use-cases) · [SDK Reference](#sdk-reference)
 
 ## Prerequisites
 
-- Enterprise subscription (required for API access)
-- API key from your Enterprise account
+- API subscription (required for API access)
+- API key from your developer account
 - Node.js 18+ (for JS/React) or Python 3.8+ (for Python)
 
 ## Installation
@@ -37,22 +37,10 @@ npm install @thisispamela/react @thisispamela/sdk
 npm install -g @thisispamela/cli
 ```
 
-**MCP (for MCP-based agents):**
-```bash
-npm install @thisispamela/mcp
-```
-
-**Widget (embeddable, no framework):**
-```bash
-npm install @thisispamela/widget
-```
-
-Latest versions: SDK / CLI / Widget / MCP / Python `1.1.2`, React `1.1.3`.
-
 ## Getting Your API Key
 
-1. Sign up for an Enterprise subscription at [app.thisispamela.com](https://app.thisispamela.com)
-2. Navigate to Settings → Enterprise Access
+1. Sign up for an API subscription at [developer.thisispamela.com](https://developer.thisispamela.com)
+2. Navigate to the API settings panel
 3. Set up billing through Stripe
 4. Click "Create API Key"
 5. Save immediately - the full key (starts with `pk_live_`) is only shown once
@@ -129,12 +117,9 @@ thisispamela create-call \
 
 For detailed SDK documentation:
 
-- **[JavaScript SDK](https://docs.thisispamela.com/sdk/javascript)** - Full JS/TS reference
-- **[Python SDK](https://docs.thisispamela.com/sdk/python)** - Full Python reference
-- **[React Components](https://docs.thisispamela.com/sdk/react)** - Component library (v1.1.3)
-- **[Widget](https://docs.thisispamela.com/sdk/widget)** - Embeddable widget for any website
-- **[MCP Server](https://docs.thisispamela.com/sdk/mcp)** - MCP tools for AI assistants
-- **[CLI](https://docs.thisispamela.com/sdk/cli)** - Command-line reference
+- **[JavaScript SDK](../../../sdk/javascript.md)** - Full JS/TS reference
+- **[Python SDK](../../../sdk/python.md)** - Full Python reference
+- **[React Components](../../../sdk/react.md)** - Component library guide
 
 ## Webhooks
 
@@ -153,26 +138,24 @@ Verify webhook signatures with the `X-Pamela-Signature` header.
 - **$0.10/minute** for API usage
 - **Minimum 1 minute** per call
 - **Only connected calls** are billed
-- Enterprise subscription required
+- API subscription required
 
 ## Troubleshooting
 
 **"Invalid API key"**
 - Verify key starts with `pk_live_`
-- Check key is active in Enterprise panel
+- Check key is active in the API settings panel
 
 **"403 Forbidden"**
-- Enterprise subscription required
-- Check subscription status at app.thisispamela.com
+- API subscription required
+- Check subscription status at developer.thisispamela.com
 
 **"Invalid phone number"**
 - Use E.164 format with country code: `+1234567890`
 
 ## Resources
 
-- **Website:** https://thisispamela.com
-- **Docs:** https://docs.thisispamela.com
-- **Demo:** https://demo.thisispamela.com
-- **API:** https://api.thisispamela.com
-- **Discord (live support):** https://discord.gg/cJj5CK8V
-- **Email:** support@thisispamela.com
+- Docs: https://docs.thisispamela.com/
+- Demo: https://demo.thisispamela.com/
+- API: https://api.thisispamela.com
+- Support: support@thisispamela.com
