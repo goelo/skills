@@ -1,0 +1,11 @@
+{
+  "owner": "manyfestation",
+  "slug": "kaspa",
+  "displayName": "Kaspa",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770042185726,
+    "commit": null
+  },
+  "history": []
+}
