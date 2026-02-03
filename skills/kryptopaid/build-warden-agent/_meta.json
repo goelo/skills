@@ -1,0 +1,11 @@
+{
+  "owner": "kryptopaid",
+  "slug": "build-warden-agent",
+  "displayName": "Build an Agent with Warden",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770085771825,
+    "commit": null
+  },
+  "history": []
+}
