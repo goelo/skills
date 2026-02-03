@@ -1,0 +1,11 @@
+{
+  "owner": "kunoiiv",
+  "slug": "proof-of-memory",
+  "displayName": "Proof-of-Memory - BTC PoW Immutable Chain",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770049286377,
+    "commit": null
+  },
+  "history": []
+}
