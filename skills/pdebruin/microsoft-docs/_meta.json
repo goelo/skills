@@ -1,0 +1,11 @@
+{
+  "owner": "pdebruin",
+  "slug": "microsoft-docs",
+  "displayName": "Microsoft Learn documentation",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770107001350,
+    "commit": null
+  },
+  "history": []
+}
