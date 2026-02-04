@@ -1,14 +1,14 @@
 ---
 name: clawd-docs-v2
-description: Smart ClawdBot documentation access with local search index, cached snippets, and on-demand fetch. Token-efficient and freshness-aware.
-homepage: https://docs.clawd.bot/
-metadata: {"clawdbot":{"emoji":"📚"}}
+description: Smart OpenClaw documentation access with local search index, cached snippets, and on-demand fetch. Token-efficient and freshness-aware.
+homepage: https://docs.openclaw.ai/
+metadata: {"openclaw":{"emoji":"📚"}}
 version: 2.2.0
 ---
 
 # Clawd-Docs v2.0 - Smart Documentation Access
 
-This skill provides **intelligent access** to ClawdBot documentation with:
+This skill provides **intelligent access** to OpenClaw documentation with:
 - **Local search index** - instant keyword lookup (0 tokens)
 - **Cached snippets** - pre-fetched common answers (~300-500 tokens)
 - **On-demand fetch** - full page when needed (~8-12k tokens)
@@ -23,7 +23,7 @@ This skill provides **intelligent access** to ClawdBot documentation with:
 Before fetching anything, check if a **Golden Snippet** exists:
 
 ```bash
-ls ~/clawd/data/docs-snippets/
+ls ~/.openclaw/data/docs-snippets/
 ```
 
 **Available snippets (check cache first!):**
@@ -32,7 +32,7 @@ ls ~/clawd/data/docs-snippets/
 | `telegram-setup.md` | "ako nastaviť telegram", "telegram setup" |
 | `telegram-allowfrom.md` | "allowFrom", "kto mi môže písať", "access control" |
 | `oauth-troubleshoot.md` | "token expired", "oauth error", "credentials" |
-| `update-procedure.md` | "ako updatnuť", "update clawdbot" |
+| `update-procedure.md` | "ako updatnuť", "update openclaw" |
 | `restart-gateway.md` | "restart", "reštart", "stop/start" |
 | `config-basics.md` | "config", "nastavenie", "konfigurácia" |
 | `config-providers.md` | "pridať provider", "discord setup", "nový kanál" |
@@ -40,12 +40,12 @@ ls ~/clawd/data/docs-snippets/
 
 **Read snippet:**
 ```bash
-cat ~/clawd/data/docs-snippets/telegram-setup.md
+cat ~/.openclaw/data/docs-snippets/telegram-setup.md
 ```
 
 ### Step 2: Search Index (if snippet doesn't exist)
 
-Check `~/clawd/data/docs-index.json` for page suggestions.
+Check `~/.openclaw/data/docs-index.json` for page suggestions.
 
 **Keyword matching:**
 - "telegram" → channels/telegram
@@ -59,25 +59,25 @@ Check `~/clawd/data/docs-index.json` for page suggestions.
 
 ```bash
 # Convert path: concepts/memory → concepts_memory.md
-ls ~/clawd/data/docs-cache/ | grep "concepts_memory"
+ls ~/.openclaw/data/docs-cache/ | grep "concepts_memory"
 ```
 
 **If exists, read locally (0 tokens!):**
 ```bash
-cat ~/clawd/data/docs-cache/concepts_memory.md
+cat ~/.openclaw/data/docs-cache/concepts_memory.md
 ```
 
 ### Step 4: Fetch Page (only if NOT in cache)
 
-Use native **web_fetch** tool (part of Clawdbot core - FREE and fast!):
+Use native **web_fetch** tool (part of OpenClaw core - FREE and fast!):
 
 ```javascript
-web_fetch({ url: "https://docs.clawd.bot/{path}", extractMode: "markdown" })
+web_fetch({ url: "https://docs.openclaw.ai/{path}", extractMode: "markdown" })
 ```
 
 **Example:**
 ```javascript
-web_fetch({ url: "https://docs.clawd.bot/tools/skills", extractMode: "markdown" })
+web_fetch({ url: "https://docs.openclaw.ai/tools/skills", extractMode: "markdown" })
 ```
 
 **web_fetch advantages:**
@@ -91,7 +91,7 @@ web_fetch({ url: "https://docs.clawd.bot/tools/skills", extractMode: "markdown" 
 
 ## Search Index Structure
 
-**Location:** `~/clawd/data/docs-index.json`
+**Location:** `~/.openclaw/data/docs-index.json`
 
 ```json
 {
@@ -126,7 +126,7 @@ web_fetch({ url: "https://docs.clawd.bot/tools/skills", extractMode: "markdown" 
 
 **Check snippet expiry:**
 ```bash
-head -10 ~/clawd/data/docs-snippets/telegram-setup.md | grep expires
+head -10 ~/.openclaw/data/docs-snippets/telegram-setup.md | grep expires
 ```
 
 ---
@@ -134,24 +134,24 @@ head -10 ~/clawd/data/docs-snippets/telegram-setup.md | grep expires
 ## Common Scenarios
 
 ### "Ako nastaviť Telegram?"
-1. ✅ Read `~/clawd/data/docs-snippets/telegram-setup.md`
+1. ✅ Read `~/.openclaw/data/docs-snippets/telegram-setup.md`
 
 ### "allowFrom nefunguje"
-1. ✅ Read `~/clawd/data/docs-snippets/telegram-allowfrom.md`
+1. ✅ Read `~/.openclaw/data/docs-snippets/telegram-allowfrom.md`
 
 ### "Token expired / oauth error"
-1. ✅ Read `~/clawd/data/docs-snippets/oauth-troubleshoot.md`
+1. ✅ Read `~/.openclaw/data/docs-snippets/oauth-troubleshoot.md`
 
-### "Ako updatnúť ClawdBot?"
-1. ✅ Read `~/clawd/data/docs-snippets/update-procedure.md`
+### "Ako updatnúť OpenClaw?"
+1. ✅ Read `~/.openclaw/data/docs-snippets/update-procedure.md`
 
 ### "Ako pridať nový skill?" (nie je snippet)
 1. Search index → tools/skills
-2. Fetch: `web_fetch({ url: "https://docs.clawd.bot/tools/skills", extractMode: "markdown" })`
+2. Fetch: `web_fetch({ url: "https://docs.openclaw.ai/tools/skills", extractMode: "markdown" })`
 
 ### "Multi-agent routing"
 1. Search index → concepts/multi-agent
-2. Fetch: `web_fetch({ url: "https://docs.clawd.bot/concepts/multi-agent", extractMode: "markdown" })`
+2. Fetch: `web_fetch({ url: "https://docs.openclaw.ai/concepts/multi-agent", extractMode: "markdown" })`
 
 ---
 
@@ -160,7 +160,7 @@ head -10 ~/clawd/data/docs-snippets/telegram-setup.md | grep expires
 If you can't find what you need:
 
 ```javascript
-web_fetch({ url: "https://docs.clawd.bot/llms.txt", extractMode: "markdown" })
+web_fetch({ url: "https://docs.openclaw.ai/llms.txt", extractMode: "markdown" })
 ```
 
 Returns **complete list** of all documentation pages.
@@ -183,7 +183,7 @@ Returns **complete list** of all documentation pages.
 ## Data Locations
 
 ```
-~/clawd/data/
+~/.openclaw/data/
 ├── docs-index.json       # Search index
 ├── docs-stats.json       # Usage tracking
 ├── docs-snippets/        # Cached Golden Snippets
@@ -202,12 +202,12 @@ Returns **complete list** of all documentation pages.
 
 | Item | Value |
 |------|-------|
-| **Skill version** | 2.1.0 |
+| **Skill version** | 2.2.1 |
 | **Created** | 2026-01-14 |
-| **Updated** | 2026-01-26 |
+| **Updated** | 2026-02-04 |
 | **Authors** | Claude Code + Clawd (collaborative) |
-| **Source** | https://docs.clawd.bot/ |
-| **Dependencies** | web_fetch (Clawdbot core tool) |
+| **Source** | https://docs.openclaw.ai/ |
+| **Dependencies** | web_fetch (OpenClaw core tool) |
 | **Index pages** | ~50 core pages |
 | **Golden snippets** | 7 pre-cached |
 
@@ -215,8 +215,13 @@ Returns **complete list** of all documentation pages.
 
 ## Changelog
 
+### v2.2.1 (2026-02-04)
+- **Rename to OpenClaw** - updated all references from ClawdBot to OpenClaw
+- Updated documentation URLs from docs.clawd.bot to docs.openclaw.ai
+- Updated data paths from ~/clawd to ~/.openclaw
+
 ### v2.2.0 (2026-01-26)
-- **Migration to web_fetch** - replaced brightdata MCP with native Clawdbot tool
+- **Migration to web_fetch** - replaced brightdata MCP with native OpenClaw tool
 - Benefits: FREE ($0), faster (~400ms vs 2-5s)
 - No external dependencies (mcporter no longer required)
 - Collaborative work: Claude Code 🦞 implementation, Clawd 🐾 review
