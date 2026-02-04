@@ -20,9 +20,11 @@ WhatsApp doesn't support direct Tenor/Giphy URLs. You MUST:
 
 ### Step 1: Search for GIF
 ```bash
-gifgrep "SEARCH QUERY" --max 3 --format url
+gifgrep "SEARCH QUERY" --max 5 --format url
 ```
 Search in English for best results.
+
+**Always get 5 results and pick the best one** based on the filename/description - don't just take the first result.
 
 ### Step 2: Download the GIF
 ```bash
@@ -36,8 +38,10 @@ ffmpeg -i /tmp/gif.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/
 
 ### Step 4: Send via message tool
 ```
-message action=send to=NUMBER message="TEXT" filePath=/tmp/gif.mp4 gifPlayback=true
+message action=send to=NUMBER message="‎" filePath=/tmp/gif.mp4 gifPlayback=true
 ```
+
+Note: Use invisible character `‎` (left-to-right mark, U+200E) as message to send GIF without visible caption.
 
 ## One-liner Example
 
